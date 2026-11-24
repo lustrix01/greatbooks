@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Lora", Georgia, serif;
+  --font-body: "Lora", Georgia, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Cinzel", "Lora", serif;
+
+  --color-parchment-base: #F7F4EB;
+  --color-parchment-surface: #FCFAF5;
+  --color-parchment-aged: #EDE6D6;
+  --color-parchment-border: #D8CFBC;
+  --color-parchment-darkborder: #C7BBA4;
+
+  --color-ink-primary: #231C16;
+  --color-ink-secondary: #52473D;
+  --color-ink-muted: #7E7166;
+  --color-ink-faint: #B0A496;
+
+  --color-antique-gold: #96743A;
+  --color-antique-gold-hover: #7E602E;
+  --color-terracotta: #8C4738;
+  --color-terracotta-soft: #A35747;
+  --color-aegean-wine: #38434F;
+}
+
+/* Base Editorial Typography */
+html {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.68;
+  background-color: var(--color-parchment-base);
+  color: var(--color-ink-primary);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Classical Subtle Paper Texture using an SVG data URL */
+.parchment-texture {
+  background-color: #F7F4EB;
+  background-image: radial-gradient(#E8DFC9 0.75px, transparent 0.75px), radial-gradient(#DFD6BD 0.75px, #F7F4EB 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+/* Manuscript Drop Capital */
+.drop-cap::first-letter {
+  font-family: var(--font-serif);
+  float: left;
+  font-size: 3.4rem;
+  line-height: 0.85;
+  padding-top: 4px;
+  padding-right: 10px;
+  padding-bottom: 2px;
+  color: var(--color-terracotta);
+  font-weight: 500;
+}
+
+/* Custom classical scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #EFE8D8;
+}
+::-webkit-scrollbar-thumb {
+  background: #C7BBA4;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #96743A;
+}
+
+/* Classical book margin line */
+.classical-border {
+  border-color: var(--color-parchment-border);
+}
+
+/* Fine engraved line */
+.hairline-rule {
+  height: 1px;
+  background-color: var(--color-parchment-border);
+}
+
+/* Greek text styling */
+.greek-script {
+  font-family: var(--font-serif);
+  letter-spacing: 0.02em;
+}
